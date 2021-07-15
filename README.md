@@ -1,1 +1,11 @@
-# Rating-robot-arms-Task5
+Introduction: 
+In this task, the aim is to design a circuit that moves the two arms of the rating robot, and that is done by using six servo motors, every arm has 3 servo motors for every joint. These servo motors are controlled using Arduino. The connection and code are explained in detail below. The function of the arms is to interact with the customer (Waving, goodbying, etc..). we were asked to develop 3 patterns. I did that below in the code, firstly I set the initial position to 45 degrees, then every 3 seconds the arms will perform one pattern.
+
+The circuit: 
+As can be seen in the picture named (rating-robot-arms-circuit), this is the connection of the six servomotors, it is explained in detail in the following steps:
+1-	Connect the 5-v and ground ports of the Arduino to the positive and negative nods respectively in the breadboard.
+2-	For each servo motor, connect the red wire to the + nod of the breadboard, and connect the black wire to the - nod of the breadboard.
+3-	For each servo motor, connect the middle wire (the one that receive the signal) to one of the digital nods (2 – 7 nods in the top right)
+
+The code:
+As can be seen in the attached code, this code contains setting the motors in the initial position and performing three patterns. Firstly, in the first line we include the library Servo.h, then, we define the six servo motors using the command Servo, then in the main program using attach command, we attached every servo motor with one of the digital ports, and using write command, every servo will turn to 45 degree as the initial position. Then, delaying 2 seconds, then, performing the first pattern which is waving, by sitting servo one to 90, and changing servo two from 70 to 170, so that the right hand will be waving then after 3 seconds sit it back to the initial. After that, delaying for 1 seconds and the second pattern which is hugging will start, and that is by sitting servo one and four to 90, and all other servos to 120, then after 3 seconds sit it back to the initial. Then, wait for 3 seconds then third pattern which is raising both arms, and that is done by sitting servo one and four to 180. I finally included an empty loop because it must be there in Arduino codes.
